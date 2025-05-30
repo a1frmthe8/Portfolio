@@ -236,6 +236,12 @@ section h2::after {
 }
 
 /* Projects Section */
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 #projects-section {
     width: 100%;
     margin: auto;
@@ -262,7 +268,8 @@ section h2::after {
 
 .project-subsection {
     width: 100%;
-    margin-bottom: 4rem; /* Add space between subsections */
+    margin: 6rem 0 1rem 0; /* 3rem above, 6rem below */
+    display: block;
 }
 
 .projects-scroll-container {
@@ -401,6 +408,57 @@ footer {
     height: 375.75px;
 }
 
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Add a bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific backghround color etc */
+input[type=submit] {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: white;
+  transform: scale(1.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add a background color and some padding around the form */
+.form {
+  border-radius: 5px;
+  background-color: #909090;
+  padding: 20px;
+}
+
+.container {
+  display: inline-block;
+}
+
+.text {
+  font-size: 5em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+      typing 2s,
+      cursor .4s step-end infinite alternate;
+}
 
 /* Media Queries for Responsiveness */
 @media (min-width: 1690px) {
