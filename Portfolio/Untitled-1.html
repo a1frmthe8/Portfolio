@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam - Web Designer & Developer</title>
+    <meta name="description" content="Full-Stack Web Developer & UI/UX Designer creating modern, responsive web applications">
+    <link rel="icon" type="image/x-icon" href="images/a1frmthe8logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-image" id="home">
+        <div class="parallax"></div>
+        <div class="hero-text">
+            <h1>I am Adam</h1>
+            <p>Full-Stack Web Developer & UI/UX Designer</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+            <button class="button cta-button" onclick="document.getElementById('contact').scrollIntoView();">
+                <span>Let's Work Together</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section loading" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">Crafting digital experiences with modern web technologies, clean code, and innovative design solutions.</p>
+                    <p>I'm a passionate full-stack developer with expertise in modern JavaScript frameworks, responsive design, and user experience optimization. I love turning complex problems into simple, beautiful solutions.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <h4>🚀 Performance Focused</h4>
+                            <p>Optimized applications with 95+ PageSpeed scores</p>
+                        </div>
+                        <div class="highlight">
+                            <h4>📱 Mobile First</h4>
+                            <p>Responsive designs that work beautifully on all devices</p>
+                        </div>
+                        <div class="highlight">
+                            <h4>⚡ Modern Stack</h4>
+                            <p>React, Node.js, TypeScript, and cutting-edge tools</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                            <circle cx="100" cy="100" r="90" fill="url(#gradient1)"/>
+                            <circle cx="80" cy="80" r="8" fill="white"/>
+                            <circle cx="120" cy="80" r="8" fill="white"/>
+                            <path d="M70 130 Q100 150 130 130" stroke="white" stroke-width="3" fill="none"/>
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Projects Section -->
+        <section class="projects-section loading" id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Here are some of my recent works showcasing modern web development techniques, 
+                    responsive design, and user-centered solutions.
+                </p>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be loaded dynamically -->
+                </div>
+                <div class="projects-nav">
+                    <button class="btn-secondary" id="loadMoreProjects">Load More Projects</button>
+                </div>
+            </div>
+        </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section loading" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">SASS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">Jest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section class="terminal-section loading" id="terminal">
+        <div class="terminal-container">
+            <h2 class="terminal-title">Interactive Terminal</h2>
+            <p class="terminal-subtitle">
+                Try out some commands: help, whoami, pwd, git status, clear, skills, projects
+            </p>
+            
+            <div class="iterm-window">
+                <div class="iterm-titlebar">
+                    <div class="traffic-lights">
+                        <div class="traffic-light close"></div>
+                        <div class="traffic-light minimize"></div>
+                        <div class="traffic-light maximize"></div>
+                    </div>
+                    <div class="window-title">zsh — adam@portfolio</div>
+                </div>
+                
+                <div class="iterm-body" id="terminalBody">
+                    <div class="output">Last login: Sat May 31 14:23:17 on ttys000</div>
+                    
+                    <div class="terminal-line">
+                        <span class="prompt">adam@MacBook-Pro ~ %</span>
+                        <span class="command">neofetch</span>
+                    </div>
+                    
+                    <pre class="ascii-art">                    'c.
+             ,xNMM.
+           .OMMMMo
+           OMMM0,
+ .;loddo:' loolloddol;.
+cKMMMMMMMMMMNWMMMMMMMMMM0:
+.KMMMMMMMMMMMMMMMMMMMMMMMWd.
+XMMMMMMMMMMMMMMMMMMMMMMMX.
+;MMMMMMMMMMMMMMMMMMMMMMMM:
+:MMMMMMMMMMMMMMMMMMMMMMMM:
+.MMMMMMMMMMMMMMMMMMMMMMMMX.
+kMMMMMMMMMMMMMMMMMMMMMMMMWd.
+.XMMMMMMMMMMMMMMMMMMMMMMMMMMk
+ .XMMMMMMMMMMMMMMMMMMMMMMMMK.
+   kMMMMMMMMMMMMMMMMMMMMMMd
+    ;KMMMMMMMWXXWMMMMMMMk.
+      .cooc,.    .,coo:.</pre>
+                    
+                    <div class="output info">
+<span style="color: #81a2be;">OS:</span> macOS Sonoma 14.4.1
+<span style="color: #81a2be;">Host:</span> MacBook Pro (16-inch, 2023)
+<span style="color: #81a2be;">Kernel:</span> 23.4.0
+<span style="color: #81a2be;">Uptime:</span> 2 days, 14 hours, 23 mins
+<span style="color: #81a2be;">Packages:</span> 247 (brew)
+<span style="color: #81a2be;">Shell:</span> zsh 5.9
+<span style="color: #81a2be;">Terminal:</span> iTerm2
+<span style="color: #81a2be;">CPU:</span> Apple M3 Pro
+<span style="color: #81a2be;">Memory:</span> 3247MiB / 18432MiB
+                    </div>
+                    
+                    <div class="terminal-line">
+                        <span class="prompt">adam@MacBook-Pro ~ %</span>
+                        <span class="command">ls -la</span>
+                    </div>
+                    
+                    <div class="output">total 24
+drwxr-xr-x   8 adam  staff   256 May 31 14:23 <span style="color: #81a2be;">.</span>
+drwxr-xr-x   3 root  wheel    96 May 30 10:15 <span style="color: #81a2be;">..</span>
+-rw-r--r--   1 adam  staff   220 May 31 14:20 <span style="color: #b5bd68;">.bash_profile</span>
+drwxr-xr-x   3 adam  staff    96 May 31 12:30 <span style="color: #81a2be;">Desktop</span>
+drwxr-xr-x   4 adam  staff   128 May 31 11:45 <span style="color: #81a2be;">Documents</span>
+drwxr-xr-x   6 adam  staff   192 May 31 13:15 <span style="color: #81a2be;">Projects</span>
+-rw-r--r--   1 adam  staff  1024 May 31 14:23 <span style="color: #f0c674;">README.md</span>
+-rw-r--r--   1 adam  staff   512 May 31 14:21 <span style="color: #b5bd68;">style.css</span></div>
+                    
+                    <div class="terminal-line">
+                        <span class="prompt">adam@MacBook-Pro ~ %</span>
+                        <span class="command">cat README.md</span>
+                    </div>
+                    
+                    <div class="output"># Adam's Portfolio
+
+Welcome to my web development portfolio! This site showcases my skills in:
+
+- Frontend Development (React, Vue.js, TypeScript)
+- Backend Development (Node.js, Express, MongoDB)
+- UI/UX Design & Responsive Web Design
+- Modern Web Technologies & Performance Optimization
+
+Feel free to explore my projects and get in touch if you'd like to collaborate!</div>
+                    
+                    <div class="current-line">
+                        <span class="prompt">adam@MacBook-Pro ~ %</span>
+                        <input type="text" class="input-area" id="commandInput" placeholder="">
+                        <div class="cursor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="form-section loading" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="contact-description">
+                        Ready to bring your ideas to life? Let's discuss your project and create something amazing together.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m22 2-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                            <span>adam@portfolio.dev</span>
+                        </div>
+                        <div class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            <span>linkedin.com/in/adam-dev</span>
+                        </div>
+                        <div class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            <span>github.com/adam-dev</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form" id="form">
+                    <form id="contactForm" action="action_page.php" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select name="country" id="country" required>
+                                <option value="">Loading countries...</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select name="project-type" id="project-type" required>
+                                <option value="">Select project type</option>
+                                <option value="website">Website Development</option>
+                                <option value="webapp">Web Application</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Project Details</label>
+                            <textarea name="subject" id="subject" placeholder="Tell me about your project, goals, timeline, and budget..." style="height:120px" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            <span>Send Message</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m22 2-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Adam Portfolio. Built with modern web technologies.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
