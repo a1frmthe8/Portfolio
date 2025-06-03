@@ -749,6 +749,7 @@ section {
     width: 60px;
     height: 30px;
     margin-left: auto;
+    align-self: center;
 }
 
 .theme-switch input {
