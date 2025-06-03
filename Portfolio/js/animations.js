@@ -219,7 +219,7 @@ class AnimationsManager {
                 left: ${Math.random() * 100}%;
                 top: ${Math.random() * 100}%;
                 animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
-                animation-delay: ${Math.random() * 2}s;
+                animation-delay: ${Math.random() * 4}s;
             `;
             container.appendChild(particle);
         }
