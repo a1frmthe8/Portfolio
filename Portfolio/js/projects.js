@@ -16,13 +16,16 @@ class ProjectsManager {
                 description: "Personal portfolio website with interactive terminal, project showcase, and contact form. Built with modern web technologies and optimized for performance.",
                 image: "💼",
                 tags: ["HTML5", "CSS3", "JavaScript", "Performance", "SEO"],
+                githubUrl: "https://github.com/a1frmthe8/Portfolio/tree/main/Portfolio",
                 featured: true
             },
             {
                 title: "Restaurant Website",
                 description: "Modern restaurant website with online reservations, menu management, and customer reviews. Includes admin panel for restaurant owners.",
                 image: "🍽️",
-                tags: ["HTML5", "CSS3", "Javascript", "Stripe", "Google Maps"],
+                tags: ["HTML5", "CSS3", "Javascript", "Google Maps"],
+                liveUrl: "https://restaurant-8s0.pages.dev/",
+                githubUrl:"https://github.com/a1frmthe8/Restaurant",
                 featured: true
             },
             {
@@ -30,7 +33,7 @@ class ProjectsManager {
                 description: "Valentine's Day Card with interactive buttons which change size depending on the decision made and changing the gif currently being show. Built as a Web app.",
                 image: "❤️",
                 tags: ["HTML5", "CSS3", "JavaScript", "Web App"],
-                liveUrl: "https://taskapp.portfolio.dev",
+                liveUrl: "https://love-3vu.pages.dev/",
                 githubUrl: "https://github.com/adam-dev/task-manager",
                 featured: true
             },
