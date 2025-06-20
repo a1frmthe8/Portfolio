@@ -24,7 +24,7 @@ class ProjectsManager {
                 description: "Modern restaurant website with online reservations, menu management, and customer reviews. Includes admin panel for restaurant owners.",
                 image: "🍽️",
                 tags: ["HTML5", "CSS3", "Javascript", "Google Maps"],
-                liveUrl: "https://restaurant-8s0.pages.dev/",
+                liveUrl: "https://restaurant-8s0.pages.dv/",
                 githubUrl:"https://github.com/a1frmthe8/Restaurant",
                 featured: true
             },
