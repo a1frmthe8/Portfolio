@@ -245,18 +245,19 @@ section {
 
 .nav-link {
     padding: 0.75rem 1.5rem;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
     transition: all 0.3s ease;
     font-size: 0.9rem;
-}
+} 
 
 .nav-link:hover, .nav-link.active {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
 }
+
 
 /* ===== ABOUT SECTION ===== */
 .about-section {
@@ -765,7 +766,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #87CEEB, #4169E1);
+    background: var(--gradient-primary);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 30px;
     overflow: hidden;
@@ -803,7 +804,7 @@ section {
 
 /* When checked (dark mode) */
 input:checked + .slider {
-    background: linear-gradient(135deg, #2D1B69, #0F0C29);
+    background: var(--gradient-primary);
 }
 
 /* The circle and emoji (always visible, emoji centered) */
@@ -841,7 +842,7 @@ input:checked + .slider:before {
 /* Move the circle when checked */
 input:checked + .slider:before {
     transform: translateX(30px);
-    background: #00bcd4;
+    background: var(--bg-dark);
 }
 
 /* Fade sun out, moon in */
@@ -920,6 +921,7 @@ body {
 }
 
 .nav-link {
+    background: #6365f154 !important;
     color: var(--text-primary);
     transition: color 0.3s ease;
 }
@@ -991,4 +993,11 @@ body {
 .hero-text p {
     color: #d1d5db !important;
     transition: none !important;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: 2px;
 }

@@ -319,8 +319,8 @@ animationStyles.textContent = `
     }
 
     .nav-link.active {
-        background: rgba(255, 255, 255, 0.2) !important;
-        color: white !important;
+    background:rgba(207, 214, 236, 0.41) !important; /* Light indigo tint */
+    color: #3730a3 !important;      /* Deep indigo text */
     }
 
     /* Enhanced transitions */
