@@ -214,10 +214,8 @@ class FormManager {
         try {
             // Collect form data
             const formData = new FormData(this.contactForm);
-            const data = Object.fromEntries(formData.entries());
-
-            // Simulate API call (replace with your actual endpoint)
-            await this.submitFormData(data);
+            // Submit to Formspree endpoint
+            await this.submitFormData(formData);
 
             // Show success message
             this.showFormMessage('Thank you! Your message has been sent successfully.', 'success');
@@ -231,19 +229,20 @@ class FormManager {
         }
     }
 
-    async submitFormData(data) {
-        // Replace this with your actual form submission logic
-        // For now, simulate an API call
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simulate success (you can add error simulation for testing)
-                if (Math.random() > 0.1) { // 90% success rate
-                    resolve(data);
-                } else {
-                    reject(new Error('Simulated server error'));
-                }
-            }, 2000);
+    async submitFormData(formData) {
+        // Submit form data to Formspree endpoint
+        const response = await fetch('https://formspree.io/f/xgvynbwr', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
         });
+
+        if (!response.ok) {
+            throw new Error('Formspree submission failed');
+        }
+        return response.json();
     }
 
     setSubmitButtonState(state) {
