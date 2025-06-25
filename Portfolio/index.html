@@ -331,8 +331,8 @@ Feel free to explore my projects and get in touch if you'd like to collaborate!<
                             <textarea name="subject" id="subject" placeholder="Tell me about your project, goals, timeline, and budget..." style="height:120px" required></textarea>
                         </div>
                         
-                        <div class="g-recaptcha" data-sitekey="6LfL-2wrAAAAAMywPek6xNmok16oGOaYirkVXCAj"></div>
-                        <button type="submit" class="submit-button">
+                        <div class="g-recaptcha" data-sitekey="6LfL-2wrAAAAAMywPek6xNmok16oGOaYirkVXCAj" data-callback="enableSubmit" data-expired-callback="disableSubmit"></div>
+                        <button type="submit" class="submit-button" id="submitBtn">
                             <span>Send Message</span>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="m22 2-7 20-4-9-9-4 20-7z"/>
