@@ -193,41 +193,53 @@ class FormManager {
     }
 
     async handleFormSubmit() {
-        // Validate all fields
-        const inputs = this.contactForm.querySelectorAll('input[required], select[required], textarea[required]');
-        let isFormValid = true;
+    // Validate all fields
+    const inputs = this.contactForm.querySelectorAll('input[required], select[required], textarea[required]');
+    let isFormValid = true;
 
-        inputs.forEach(input => {
-            if (!this.validateField(input)) {
-                isFormValid = false;
-            }
-        });
+    inputs.forEach(input => {
+        if (!this.validateField(input)) {
+            isFormValid = false;
+        }
+    });
 
-        if (!isFormValid) {
-            this.showFormMessage('Please correct the errors above', 'error');
+    // --- RECAPTCHA CHECK ---
+    const recaptcha = document.querySelector('.g-recaptcha');
+    if (recaptcha) {
+        const response = grecaptcha.getResponse();
+        if (!response) {
+            this.showFormMessage('Please complete the reCAPTCHA to prove you are human.', 'error');
             return;
         }
-
-        // Show loading state
-        this.setSubmitButtonState('loading');
-
-        try {
-            // Collect form data
-            const formData = new FormData(this.contactForm);
-            // Submit to Formspree endpoint
-            await this.submitFormData(formData);
-
-            // Show success message
-            this.showFormMessage('Thank you! Your message has been sent successfully.', 'success');
-            this.contactForm.reset();
-            
-        } catch (error) {
-            console.error('Form submission error:', error);
-            this.showFormMessage('Sorry, there was an error sending your message. Please try again.', 'error');
-        } finally {
-            this.setSubmitButtonState('default');
-        }
     }
+    // --- END RECAPTCHA CHECK ---
+
+    if (!isFormValid) {
+        this.showFormMessage('Please correct the errors above', 'error');
+        return;
+    }
+
+    // Show loading state
+    this.setSubmitButtonState('loading');
+
+    try {
+        // Collect form data
+        const formData = new FormData(this.contactForm);
+        // Submit to Formspree endpoint
+        await this.submitFormData(formData);
+
+        // Show success message
+        this.showFormMessage('Thank you! Your message has been sent successfully.', 'success');
+        this.contactForm.reset();
+        if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+        
+    } catch (error) {
+        console.error('Form submission error:', error);
+        this.showFormMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+    } finally {
+        this.setSubmitButtonState('default');
+    }
+}
 
     async submitFormData(formData) {
         // Submit form data to Formspree endpoint
