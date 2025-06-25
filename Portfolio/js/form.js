@@ -339,18 +339,3 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     new FormManager();
 });
-
-// Disable submit button by default if reCAPTCHA is present
-document.addEventListener('DOMContentLoaded', function() {
-    var recaptcha = document.querySelector('.g-recaptcha');
-    var submitBtn = document.getElementById('submitBtn');
-    if (recaptcha && submitBtn) {
-        submitBtn.disabled = true;
-        window.enableSubmit = function() {
-            submitBtn.disabled = false;
-        };
-        window.disableSubmit = function() {
-            submitBtn.disabled = true;
-        };
-    }
-});
